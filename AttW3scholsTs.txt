@@ -1,0 +1,126 @@
+W3SCHOOL TYPESCRIPT
+
+1. TypeScript allows developers to add types to JavaScript.
+
+2. JavaScript is a loosely typed language.
+
+3. tsconfig.json;
+
+4.There are two main ways TypeScript assigns a type:
+implicit
+explicit
+
+5. let firstName = "Dylan";
+
+6. let firstName: string = "Dylan";
+
+7. let myVar: any;
+
+8. let myVar: unknown;
+
+9. const names: readonly string[] = ["Dylan"];
+
+10. The order of value types does not matter for Tuples:
+
+false
+11. let ourTuple: [string, boolean];
+
+12.const car: { type: string, model: string, year: number} = {
+ type: "Toyota",
+ model: "Corolla",
+ year: 2009
+};
+
+13.const car: { type: string, model?: string } = { 
+	type: "Toyota"
+};
+
+14. 
+enum myEnum{ 
+myFirstConst, 
+mySecondConst
+};
+
+15. enum myEnum {
+myFirstConst = "first"  
+mySecondConst ="second"
+};
+
+16.type carType = string
+
+17. interface myInterface {
+  myProp: string
+};
+
+18. interface myExtInterface extends myInterface {  
+myExtProp: number
+};
+
+19. function myFunc(myVar: string | number) {  
+console.log(myVar)
+}
+
+20. function myFunc(): string {  
+return "Learning is Fun!";
+}
+
+21. function myFunc(): void {  
+console.log("Learning is Fun!");
+}
+
+22. function myFunc(myVar1: string, myVar2: string) {  
+return(myVar1 + myVar2);
+}
+
+23. function myFunc(myVar1: string, myVar2?: string) {  
+return(myVar1 + (myVar2 || ""));
+}
+
+24. let myVar: unknown = "Hello world!";
+console.log((myVar as string).length);
+
+25. let myVar: unknown = "Hello world!";
+console.log((<string>myVar).length);
+
+26. class Person {
+ private name: string;
+
+ public constructor(name: string) {
+  this.name = name;
+}
+
+ 
+public
+ getName(): string {
+  return this.name;
+ }
+}
+
+27. 
+function createPair <typeX, typeY>(x: typeX, y: typeY): [typeX, typeY] { 
+return [x, y];
+}
+console.log(createPair<string, number>('Meaning', 42));
+
+28. interface Person {
+    age: number;
+    firstName: string;
+    lastName: string;
+}
+let kindPerson: partial<person> = {};
+
+29. interface Person {
+    age: number;
+    firstName: string;
+    lastName?: string;
+}
+let kindPerson: Required<Person> = {
+    age: 1800,
+    firstName: "Santa",
+    lastName: "Claus"
+};
+
+30. Record<string, number> is equivalent to { [key: string]: number }
+
+Aluno: Joao Vitor de Oliveira Silva
+Turma: DS 2° módulo
